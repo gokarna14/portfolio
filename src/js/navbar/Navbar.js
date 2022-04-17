@@ -94,13 +94,6 @@ const Outline =()=>{
     const goToTop = (window.scrollY > 200) && <div className="page-item"
     onClick={()=>{window.scrollTo(0, 0)}}
     title="Show/Hide Navbar"
-    style={
-        {
-            position: 'fixed',
-            right: '2%',
-            top: '2%'
-        }
-    }
     >
         <button className="page-link" href="#" aria-label="Previous">
             <span aria-hidden="true"> Go to top ☝</span>
@@ -113,21 +106,21 @@ const Outline =()=>{
             <div className='shadow-lg'>
                 <nav className={"nav-tabs navbar navbar-expand " + navPosition[navPositionIndex]}> {/* end for right */}
 
-                    {navPositionIndex != 0 && <button className="btn"
+                    {navPositionIndex != 0 && <span className="btn"
                     title='Move Left'
                     onClick={()=>{moveNavbar('left')}}
                     >
-                        <span aria-hidden="true">⬅</span>
-                    </button>}
+                        <span aria-hidden="true">👈</span>
+                    </span>}
                 
                     {navItems}
                     
-                    {navPositionIndex != 2 && <button className="btn"
+                    {navPositionIndex != 2 && <span className="btn"
                     title='Move Right'
                     onClick={()=>{moveNavbar('right')}}
                     >
-                        <span aria-hidden="true">➡</span>
-                    </button>}
+                        <span aria-hidden="true">👉</span>
+                    </span>}
 
                     {goToTop}
                 </nav>

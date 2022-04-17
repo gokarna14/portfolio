@@ -10,16 +10,16 @@ import 'react-cool-text/react-cool-text/output/theme.css';
 import React, { useEffect, useState } from 'react';
 
 import './css/fonts.css'
-import Navbar from './js/navbar/Navbar';
 import Home from './js/home/Home';
 import { hugeScroll } from './js/essentials';
+import AlwaysRender from './js/AlwaysRender';
 
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <AlwaysRender></AlwaysRender>
       {hugeScroll}
     </div>
   );
