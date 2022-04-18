@@ -2,11 +2,12 @@ import React from "react";
 import { Parallax } from "react-parallax";
 
 
-import { spacing, profiles } from "../essentials";
+import { spacing, profiles, themeRGB, themeRGB2 } from "../essentials";
 import '../../css/home/home.css'
+import Parallel from "../animations/Parallel";
+import { OfficialPortrait } from "../../db/img/img";
 
-
-const Home = ()=>{
+const Home = (props)=>{
 
     
 
@@ -17,7 +18,7 @@ const Home = ()=>{
                 style={{
                     textDecoration:'none'
                 }}
-                target="blank"> {i.logo} </a>
+                target="blank"> {i.logo} / </a>
             )
         }
     )
@@ -26,14 +27,15 @@ const Home = ()=>{
 
     return(
         <>
-            <div className="niceCenter">
+            <div className="">
                 <Parallax
                 blur={0} 
-                bgImage={require('../../resources/img/OfficialPortrait.png')} 
+                bgImage={OfficialPortrait[props.index]} 
                 strength={250}
+                
                 >
                 {spacing}
-                <div className="fillInfo">
+                <div className="fullInfo">
                     <div className='niceCenter'>
                         <div className="info">
                             <h1 className="heading">
@@ -58,7 +60,7 @@ const Home = ()=>{
                                 </a> 
                                 <br/>
                                 <a 
-                                    href="http://doece.pcampus.edu.np/index.php/bex-becie/"
+                                    href="http://doece.pcampus.edu.np/props.index.php/bex-becie/"
                                     title="See course structure"
                                     className="link-warning emphasize"
                                     target="blank"
@@ -67,7 +69,7 @@ const Home = ()=>{
                                 </a>
                                 <br />
                                 Class of 2023 [ <a 
-                                    href="http://doece.pcampus.edu.np/index.php/students-bachelor-in-electronics-and-communication-engineering/"
+                                    href="http://doece.pcampus.edu.np/props.index.php/students-bachelor-in-electronics-and-communication-engineering/"
                                     className="link-warning emphasize"
                                     target="blank"
                                 >
@@ -91,8 +93,17 @@ const Home = ()=>{
                 {spacing}
                 {spacing}
                 </Parallax>
-
-
+            <div style={{
+                textAlign: "left"
+            }}
+            >
+                <Parallel
+                    r={themeRGB2[props.index].R}
+                    g={themeRGB2[props.index].G}
+                    b={themeRGB2[props.index].B}
+                    text={'Projects'}
+                ></Parallel>
+            </div>
             </div>
         </>
     )

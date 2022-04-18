@@ -4,10 +4,11 @@ import { animated, useSpring } from 'react-spring';
 
 import { NavTopics} from "../../db/navbar/content";
 import '../../css/navbar/navbar.css'
+import { themeRGB } from '../essentials';
 
 
 
-const Outline =()=>{
+const Navbar =(props)=>{
 
 
     const [offset, setOffset] = useState(0);
@@ -44,7 +45,7 @@ const Outline =()=>{
 
     const navPosition = ['justify-content', 'justify-content-center', 'justify-content-end']
 
-    const[navPositionIndex, setNavPositionIndex] = useState(0)
+    const[navPositionIndex, setNavPositionIndex] = useState(1)
 
 
     const navItems = NavTopics.map(
@@ -93,15 +94,16 @@ const Outline =()=>{
 
     const goToTop = (window.scrollY > 200) && <div className="page-item"
     onClick={()=>{window.scrollTo(0, 0)}}
-    title="Show/Hide Navbar"
+    title="Go to top of the page"
     >
-        <button className="page-link" href="#" aria-label="Previous">
+        <div className="btn btn-outline-warning" href="#" aria-label="Previous">
             <span aria-hidden="true"> Go to top ☝</span>
-        </button>
+        </div>
     </div>
 
 
     return(
+        <>
         <div className='fullNav'>
             <div className='shadow-lg'>
                 <nav className={"nav-tabs navbar navbar-expand " + navPosition[navPositionIndex]}> {/* end for right */}
@@ -114,19 +116,28 @@ const Outline =()=>{
                     </span>}
                 
                     {navItems}
+
+                    <button 
+                    className='btn btn-dark'
+                    onClick={props.changeColor}
+                    title={"Change the theme of website. Current theme: " + props.index}
+                    >Change Theme
+                    </button>
                     
+                    {goToTop}
+
                     {navPositionIndex != 2 && <span className="btn"
                     title='Move Right'
                     onClick={()=>{moveNavbar('right')}}
                     >
+
                         <span aria-hidden="true">👉</span>
                     </span>}
-
-                    {goToTop}
                 </nav>
             </div>
         </div>
+    </>
     )
 }
 
-export default Outline;
+export default Navbar;

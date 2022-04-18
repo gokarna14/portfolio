@@ -1,6 +1,6 @@
 .fullInfo {
     text-align: left;
-    padding-left: 5%;
+    padding-left: 0%;
 }
 
 .heading{
@@ -16,13 +16,15 @@
     color: antiquewhite;
     float: left;
     text-align: left;
+    text-shadow: 1px 1px 10px white;
 }
 
 .emphasize{
     color: aliceblue;
     /* font-weight: bolder; */
-    text-shadow: 2px 2px 5px white;
     text-decoration: none;
+    font-weight: bolder;
+    font-style: italic;
 }
 
 .emphasizeBold{

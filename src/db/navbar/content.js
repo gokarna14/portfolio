@@ -19,13 +19,13 @@ export const NavTopics = [
         // },
         {
             path: '/hfg', 
-            label: 'Skills', 
+            label: 'Projects', 
             class: "nav-item", 
             DSlass: "nav-link btn btn-outline"
         },
         {
             path: '/hfg', 
-            label: 'Projects', 
+            label: 'Skills', 
             class: "nav-item", 
             DSlass: "nav-link btn btn-outline"
         },
