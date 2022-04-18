@@ -1,28 +1,28 @@
 export var projects = [
     {
-        name: 'Machine Learning Implemented Sentiment Analysis and Personality Prediction',
+        name: 'Machine Learning Implemented Sentiment Analysis and Personality Prediction 🔥🔥🔥',
         link: 'https://github.com/gokarna14/threader',
     },{
-        name: 'Online typing speed test, NodeJS app',
-        link: 'http://mamaghar.me/typing/',
-    },{
-        name: 'A snake game using python',
+        name: 'A snake game using python  🔥🔥',
         link: 'https://www.youtube.com/watch?v=_LWoPfzV0e4&ab_channel=PGA',
     },{
-        name: 'A simple chat bot',
+        name: 'Online typing speed test, NodeJS app  🔥',
+        link: 'http://mamaghar.me/typing/',
+    },{
+        name: 'A simple chat bot  🔥',
         link: 'https://github.com/gokarna14/Chat/tree/master',
     },{
-        name: 'Traffic rule management system for 8 lane road, 4 way junction',
+        name: 'Traffic rule management system for 8 lane road, 4 way junction  🔥',
         link: 'https://github.com/gokarna14/Traffic-Rule-Management-System',
     },{
-        name: 'SOBG, a simple 2D game, C++',
+        name: 'SOBG, a simple 2D game, C++  🔥',
         link: 'https://github.com/gokarna14/SOBG',
     },{
-        name: 'PI approximation using SFML, C++',
+        name: 'PI approximation using SFML, C++  🔥',
         link: 'https://github.com/gokarna14/PI-approximation-using-Simulations-CPP-SFML',
     },{
         name: 'Other projects',
-        link: 'https://github.com/gokarna14?tab=repositories',
+        link: 'https://github.com/gokarna14?tab=repositories  🔥',
     },
 
 ]

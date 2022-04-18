@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { update } from "react-spring";
-import Home from "./home/Home";
 import Navbar from './navbar/Navbar';
+import Home from "./home/Home";
+import Project from "./projects/Project";
 
 import { themeRGB, themeRGB2, fontRGB } from "./essentials";
 import { rgb } from "@react-spring/shared";
@@ -34,6 +35,7 @@ const AlwaysRender = ()=>{
         var elements = document.getElementsByClassName("fullNav")
         for (var i = 0; i < elements.length; i++) {
             elements[i].style.backgroundColor=  color;
+            elements[i].style.color =  color3;
         }
         elements = document.getElementsByTagName("button")
         for (var i = 0; i < elements.length; i++) {
@@ -61,12 +63,15 @@ const AlwaysRender = ()=>{
     return(
         <>
             <Navbar
-            changeColor={changeColor}
-            index={themeIndex}
+                changeColor={changeColor}
+                index={themeIndex}
             ></Navbar>
             <Home
                 index={themeIndex}
             ></Home>
+            <Project
+                index={themeIndex}
+            ></Project>
         </>
     )
 }

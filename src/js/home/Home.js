@@ -93,17 +93,6 @@ const Home = (props)=>{
                 {spacing}
                 {spacing}
                 </Parallax>
-            <div style={{
-                textAlign: "left"
-            }}
-            >
-                <Parallel
-                    r={themeRGB2[props.index].R}
-                    g={themeRGB2[props.index].G}
-                    b={themeRGB2[props.index].B}
-                    text={'Projects'}
-                ></Parallel>
-            </div>
             </div>
         </>
     )

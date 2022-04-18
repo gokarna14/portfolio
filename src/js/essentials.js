@@ -1,4 +1,4 @@
-import { OfficialPortrait, github, fb, youtube, twitter, linkedin} from "../db/img/img";
+import { OfficialPortrait, github, fb, youtube, twitter, linkedin, gmail} from "../db/img/img";
 
 
 export const hugeScroll = Array.from({length: 400}, () => 20).map(
@@ -37,6 +37,10 @@ export const profiles=[
     {
         logo: youtube,
         link: 'https://www.youtube.com/c/PGA123/featured'
+    },
+    {
+        logo: gmail,
+        link: 'mailto:gokarna.adhikari14@gmail.com'
     },
 ]
 
